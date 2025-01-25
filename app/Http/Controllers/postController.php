@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 
-// class postController extends Controller
-// {
-//     //
-// }
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class postController extends Controller
+{
+    //
+}
