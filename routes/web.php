@@ -1,24 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController; // Import the controller
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/user', [UserController::class, 'getUser']); // Route to the controller method
+Route::get('/about/{name}', [UserController::class, 'aboutUser']); // Passing data 
 
-// usual method for routing
-Route::get('/home', function(){
-    return view('home');
-});
-
-Route::view('/home','home'); 
-// another method to routing
-
-// passing data to view
-Route::get('/about/{name}', function($name){
-    return view('about',['name'=>$name]);
-});
-
-// this is how to rederect a page..this call redirect home page to root page
-Route::redirect('/home', '/');
+Route::get('admin', [UserController::class, 'adminUser']); // Route to the controller method nested
