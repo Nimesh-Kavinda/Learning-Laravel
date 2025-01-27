@@ -8,19 +8,9 @@ class UserController extends Controller
 {
     //
     function userHome(){
-        return view('home');
+        $name = 'Nimesh';
+        $users = ['kavinda', 'nimesh', 'saman'];
+        return view('home', ['name' => $name, 'users' => $users]);
     }
 
-    function userAbout($name){
-        return view('about',['user'=>$name]);
-    }
-
-    function adminLogin(){
-        
-        if(View::exists('admin.login')){
-            return view('admin.login');
-    } else {
-        return view('welcome');
-    }   
-    }
 }

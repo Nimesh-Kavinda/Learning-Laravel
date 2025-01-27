@@ -7,10 +7,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('home', 'home');
-Route::view('about', 'about');
+// Route::view('home', 'home');
+// Route::view('about', 'about');
 
-Route::get('user-home', [UserController::class, 'userHome']);
+Route::get('home', [UserController::class, 'userHome']);
 Route::get('user-about/{name}', [UserController::class, 'userAbout']);
 
 Route::view('admin', 'admin.login');
