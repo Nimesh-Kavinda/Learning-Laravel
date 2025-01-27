@@ -8,11 +8,7 @@ Route::get('/', function () {
 });
 
 // Route::view('home', 'home');
-// Route::view('about', 'about');
+
 
 Route::get('home', [UserController::class, 'userHome']);
-Route::get('user-about/{name}', [UserController::class, 'userAbout']);
-
-Route::view('admin', 'admin.login');
-
-Route::get('admin-login', [UserController::class, 'adminLogin']);
+Route::get('about', [UserController::class, 'userAbout']);
