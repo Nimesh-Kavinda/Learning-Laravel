@@ -11,12 +11,13 @@ class UserController extends Controller
     $req->validate([
         'name'=>'required | min:3 | max:20',
         'email'=>'required|email',
-        'city'=>'required',
+        'city'=>'required|Uppercase',
     ], [
         'name.required'=>'Name cannot be empty',
         'name.min'=> 'Name must be at least 3 characters',
         'name.max' => 'Name must be at most 20 characters',
         'email.email'=>'Not a valid email',
+        'city.required'=>'City cannot be empty',
     ]);
     return $req;
     
