@@ -3,18 +3,43 @@
 
     <form action="adduser" method="post">
         @csrf
-        <div class="form-group">
-            <input type="text" placeholder="Enter UserName" name="username">
+        <div>
+            <h4>User Skills</h4>
+            <input type="checkbox" name="skills[]" id="php" value="php">
+            <label for="php">PHP</label>
+            <input type="checkbox" name="skills[]" id="java" value="java">
+            <label for="java">Java</label>
+            <input type="checkbox" name="skills[]" id="node" value="node">
+            <label for="node">Node</label>
         </div>
-        <div class="form-group">
-            <input type="text" placeholder="Enter City" name="city">
+
+        <div>
+          <h4>User Gender</h4>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
         </div>
-        <div class="form-group">
-            <input type="email" placeholder="Enter Email" name="email">
+
+        <div>
+            <h4>User Age</h4>
+            <input type="range" name="age" max="100" min="18">
         </div>
-        <div class="form-group">
-            <button type="submit">Add new user</button>
+
+        <div>
+            <h4>User City</h4>
+            <select name="city">
+                <option value="kandy">Kandy</option>
+                <option value="colombo">Colombo</option>
+                <option value="kegalle">Kegalle</option>
+            </select>
         </div>
+
+        <div style="margin-top: 20px;">
+            <button type="submit">Add user Details</button>
+        </div>
+
+
     </form>
 
 
@@ -22,7 +47,7 @@
 
 
 <style>
-    .form-group {
+    /* .form-group {
         margin-bottom: 10px;
     }
 
@@ -40,5 +65,5 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
-    }
+    } */
 </style>
