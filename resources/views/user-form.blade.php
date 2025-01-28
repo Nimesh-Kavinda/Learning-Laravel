@@ -1,8 +1,27 @@
 <div>
     <h2>Add New User</h2>
 
+    <div>
+       <!-- @if($errors->any)
+       @foreach($errors->all() as $error)
+       <div style="color: red;">{{$error}}</div>
+       @endforeach
+       @endif -->
+    </div>
+
     <form action="adduser" method="post">
         @csrf
+
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Enter Name">
+            <span style="color: red;">@error('name'){{$message}}@enderror</span>
+            <input type="text" name="email" placeholder="Enter email">
+            <span style="color: red;">@error('email'){{$message}}@enderror</span>
+            <input type="text" name="city" placeholder="Enter City">
+            <span style="color: red;">@error('city'){{$message}}@enderror</span>
+        </div>
+
+
         <div>
             <h4>User Skills</h4>
             <input type="checkbox" name="skills[]" id="php" value="php">
@@ -11,29 +30,9 @@
             <label for="java">Java</label>
             <input type="checkbox" name="skills[]" id="node" value="node">
             <label for="node">Node</label>
+            <span style="color: red;">@error('skills'){{$message}}@enderror</span>
         </div>
 
-        <div>
-          <h4>User Gender</h4>
-            <input type="radio" name="gender" id="male" value="male">
-            <label for="male">Male</label>
-            <input type="radio" name="gender" id="female" value="female">
-            <label for="female">Female</label>
-        </div>
-
-        <div>
-            <h4>User Age</h4>
-            <input type="range" name="age" max="100" min="18">
-        </div>
-
-        <div>
-            <h4>User City</h4>
-            <select name="city">
-                <option value="kandy">Kandy</option>
-                <option value="colombo">Colombo</option>
-                <option value="kegalle">Kegalle</option>
-            </select>
-        </div>
 
         <div style="margin-top: 20px;">
             <button type="submit">Add user Details</button>
@@ -47,15 +46,16 @@
 
 
 <style>
-    /* .form-group {
+    .form-group {
         margin-bottom: 10px;
     }
 
-    input {
+    .form-group input {
         width: 75%;
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
+        margin: 5px;
     }
 
     button {
@@ -65,5 +65,5 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
-    } */
+    }
 </style>
