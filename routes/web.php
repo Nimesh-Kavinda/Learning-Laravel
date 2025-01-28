@@ -8,4 +8,5 @@ Route::get('/', function () {
 });
 
 Route::view('user-form','user-form');
+Route::post('adduser',[UserController::class,'addUser']);// Add the controller method to the route
 
