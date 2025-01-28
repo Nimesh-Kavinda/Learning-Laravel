@@ -12,7 +12,11 @@ class UserController extends Controller
         'name'=>'required | min:3 | max:20',
         'email'=>'required|email',
         'city'=>'required',
-        'skills'=>'required'
+    ], [
+        'name.required'=>'Name cannot be empty',
+        'name.min'=> 'Name must be at least 3 characters',
+        'name.max' => 'Name must be at most 20 characters',
+        'email.email'=>'Not a valid email',
     ]);
     return $req;
     
