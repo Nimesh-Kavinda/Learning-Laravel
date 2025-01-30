@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class Agecheck
+class Countrycheck
 {
     /**
      * Handle an incoming request.
@@ -15,10 +15,16 @@ class Agecheck
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // echo "<h2>Agecheck Middleware</h2>";
-        if($request->age < 18){
-            die ("You are not allowed to access this page");
+        if ($request->con != "SL") {
+            $message = "You must be Sri Lankan to access this";
+            
+            echo '<div style="background-color: #f8d7da; color: #721c24; padding: 20px; margin: 20px;">
+                    <h1>' . $message . '</h1>
+                  </div>';
+            
+            die(); // Use exit() instead of die()
         }
+      
         return $next($request);
     }
 }
