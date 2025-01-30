@@ -172,5 +172,8 @@
                 </div>
             </div>
         </div>
+
+                                            <a href="{{route('hm')}}">Home page</a> 
+
     </body>
 </html>
