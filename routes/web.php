@@ -8,10 +8,5 @@ Route::get('/', function () {
 });
 
 
-// Route::view('home/profile/user','home')->name('hm');
-// name routing
 
-Route::view('home/profile/user','home')->name('hm');
-
-Route::get('show',[HomeController::class,'show']);
 
