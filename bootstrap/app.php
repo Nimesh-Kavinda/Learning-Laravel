@@ -3,8 +3,8 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
-use App\Http\Middleware\age;
-use Illuminate\Support\Facades\App;
+use App\Http\Middleware\Countrycheck;
+use App\Http\Middleware\Agecheck;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -14,10 +14,13 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         //
-        // $middleware->append(age::class); // This is the same as the snippet below
-        $middleware->use([                 
-            \App\Http\Middleware\age::class,        
-        ]);
+        $middleware->appendToGroup('check1',[
+            Countrycheck::class,
+            Agecheck::class
+        ]
+            
+        );
+       
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
