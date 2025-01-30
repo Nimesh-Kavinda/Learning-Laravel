@@ -9,7 +9,10 @@ class HomeController extends Controller
     //
 
     function show(){
-        // return redirect()->to('home/profile/user');
-        return to_route('hm');
+      return "Show Student list";
+    }
+
+    function add(){
+        return "Add Student";
     }
 }
