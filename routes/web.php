@@ -9,9 +9,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('users', [Usercontroller::class, 'users']);
 
-Route::view('users-new', 'users');
+
+
 
 
 
