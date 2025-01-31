@@ -7,4 +7,10 @@ use Illuminate\Http\Request;
 class StudentController extends Controller
 {
     //
+    function getStudents(){
+        $students = \App\Models\Student::all();
+        $data = new \App\Models\Student;
+        echo $data-> testFunc();
+        return view('students', ['data'=>$students]);
+    }
 }
