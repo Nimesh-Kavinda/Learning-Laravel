@@ -9,9 +9,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('home', 'home')->middleware([Agecheck::class, Countrycheck::class]);
-Route::view('about', 'about')->middleware([Agecheck::class, Countrycheck::class]);
-
 
 
 
