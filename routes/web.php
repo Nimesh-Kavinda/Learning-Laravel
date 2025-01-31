@@ -1,13 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StudentController;
-use App\Http\Middleware\Agecheck;
-use App\Http\Middleware\Countrycheck;
+use App\Http\Controllers\Usercontroller;
+
+
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('users', [Usercontroller::class, 'users']);
 
 
 
