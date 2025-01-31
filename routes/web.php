@@ -11,6 +11,8 @@ Route::get('/', function () {
 
 Route::get('users', [Usercontroller::class, 'users']);
 
+Route::view('users-new', 'users');
+
 
 
 
