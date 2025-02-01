@@ -10,6 +10,9 @@ Route::get('/', function () {
 });
 
 
+Route::view('form', 'user');
+
+Route::post('user', [Usercontroller::class, 'login']);
 
 
 
