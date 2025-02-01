@@ -25,5 +25,17 @@ class Usercontroller extends Controller
     }
 
 
+    function any(){
+        return "this is any function";
+    }
+
+    function group1(){
+        return "this is group1 function";
+    }
+
+    function group2(){
+        return "this is group2 function";
+    }
+
 }
 

@@ -10,10 +10,16 @@ Route::get('/', function () {
 });
 
 
-Route::get('user', [Usercontroller::class, 'get']);
-Route::post('user', [Usercontroller::class, 'post']);
-Route::put('user', [Usercontroller::class, 'put']);
-Route::delete('user', [Usercontroller::class, 'delete']);
+// Route::get('user', [Usercontroller::class, 'any']);
+// Route::post('user', [Usercontroller::class, 'any']);
+// Route::put('user', [Usercontroller::class, 'any']);
+// Route::delete('user', [Usercontroller::class, 'any']);
+
+// Route::any('user', [Usercontroller::class, 'any']);
+
+Route::match(['get', 'post'], 'user', [Usercontroller::class, 'group1']);
+Route::match(['delete', 'put'], 'user', [Usercontroller::class, 'group2']);
+
 
 Route::view('form', 'user');
 

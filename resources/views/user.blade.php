@@ -3,7 +3,7 @@
 
         <form action="user" method="post">
             @csrf
-            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" name="_method" value="PUT">
             <input type="text" name="user" placeholder="Enter name">
             <br><br>
             <input type="password" name="password" placeholder="Enter password">
