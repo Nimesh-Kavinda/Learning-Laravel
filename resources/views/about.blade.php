@@ -1,3 +1,4 @@
 <div>
-   <h1>This is aout page</h1>
+   <h1>{{__('about.heading')}}</h1>
+   <h2>{{__('about.text')}}</h2>
 </div>

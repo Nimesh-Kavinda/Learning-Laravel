@@ -6,6 +6,7 @@ return [
     "about"=> "About",
     "home"=> "Home",
     "contact"=> "Conatct us",
+    "aboutUser"=> "Hi Everyone, this is :name.I hope you doing well"
 ]
 
 

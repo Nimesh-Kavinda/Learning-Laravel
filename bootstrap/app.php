@@ -3,8 +3,8 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
-use App\Http\Middleware\Countrycheck;
-use App\Http\Middleware\Agecheck;
+use App\Http\Middleware\setlang;
+
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -14,7 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         //
-       
+       $middleware->appendToGroup('setlang', setlang::class); // Registering midleware
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
