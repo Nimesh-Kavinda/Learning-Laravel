@@ -10,10 +10,7 @@ Route::get('/', function () {
 });
 
 
-Route::view('user', 'user');
 
-
-Route::post('add', [Usercontroller::class, 'addUser']);
 
 
 
