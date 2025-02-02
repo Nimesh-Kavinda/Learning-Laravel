@@ -10,11 +10,10 @@ Route::get('/', function () {
 });
 
 
-Route::view('login', 'login');
-Route::view('profile', 'profile');
+Route::view('user', 'user');
 
-Route::post('login', [Usercontroller::class, 'login']);
-Route::get('logout', [Usercontroller::class, 'logout']);
+
+Route::post('add', [Usercontroller::class, 'addUser']);
 
 
 

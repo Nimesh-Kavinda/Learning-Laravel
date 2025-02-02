@@ -6,17 +6,18 @@ use Illuminate\Http\Request;
 
 class Usercontroller extends Controller
 {
-    //
-    function login(Request $req){
-        $req->session()->put('user',  $req->input('user'));
-        $req->session()->put('user',  $req->input());
-  
+    function addUser(Request $request){
 
-        return redirect('profile');
-    }
+        $request = session()->flash("message", 'User added succesfully');
+        $request = session()->flash("name", 'Nimesh');
 
-    function logout(){
-        session() -> pull('user');
-        return redirect('profile');
+
+
+
+        // store user data in DB
+
+
+
+        return redirect('user');
     }
 }
