@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Usercontroller;
+use App\Http\Controllers\UploadController;
+
+
 
 
 
@@ -10,7 +12,9 @@ Route::get('/', function () {
 });
 
 
+Route::view ('upload', 'upload');
 
+Route::post('upload', [UploadController::class, 'upload']);
 
 
 
