@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ImageController;
 
 
 Route::get('/', function () {
@@ -23,6 +24,12 @@ Route::get('search', [StudentController::class, 'search']);
 Route::post('delete-multi', [StudentController::class, 'deleteMultiple']);
 
 
+Route::view('upload', 'upload');
+Route::view('display', 'display');
+
+Route::post('upload', [ImageController::class, 'upload']);
+
+Route::get('img-list', [ImageController::class, ('list')]);
 
 
 
