@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\App\Models;
 use App\Models\Student;
 use Illuminate\Http\Request;
+use PhpParser\Node\Stmt\Return_;
 
 class StudentController extends Controller
 {
@@ -50,6 +51,19 @@ class StudentController extends Controller
     function edit($id){
         $student = Student::find($id);
         return view('edit-student', ['data'=> $student]);
+    }
+
+    function editStudent(Request $request, $id){
+        $student = Student::find($id); 
+        $student->name = $request->up_name;
+        $student->email = $request->up_email;
+        $student->phone = $request->up_phone;
+
+        if($student->save() == 1){
+            return redirect('list-student');
+        } else {
+            return "Student Details are not Updated";
+        }
     }
 
 }
