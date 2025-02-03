@@ -1,5 +1,12 @@
 <div>
     <h1>Students List</h1>
+    
+    @if(session('meassage'))
+    <div class="alert alert-success">
+        {{ session('meassage') }}
+    </div>
+@endif
+    
     <table border="1">
         <tr>
             <td>Name</td>

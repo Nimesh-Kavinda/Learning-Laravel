@@ -37,6 +37,7 @@ class StudentController extends Controller
          $isDelete = Student::destroy($id);
 
          if($isDelete == 1){
+            session()->flash('meassage', "Data deleted Succesfully"); 
             return redirect('list-student');
          } elseif($isDelete == 0){
             return "Data is Not Deleted";
