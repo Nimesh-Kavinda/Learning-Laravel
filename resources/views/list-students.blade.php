@@ -1,5 +1,12 @@
 <div>
     <h1>Students List</h1>
+
+
+    <form action="search" method="get">
+        <input type="text" name="search" placeholder="Search with Name" value={{@$search}}>
+        <button>Search</button>
+    </form>
+
     
     @if(session('meassage'))
     <div class="alert alert-success">
