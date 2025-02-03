@@ -11,6 +11,7 @@ Route::get('/', function () {
 Route::view('add', 'add-student');
 
 Route::post('add-student',[StudentController::class, 'add']);
+Route::get('list-student',[StudentController::class, 'list']);
 
 
 

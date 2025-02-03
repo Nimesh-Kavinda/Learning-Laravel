@@ -19,12 +19,17 @@ class StudentController extends Controller
         $result = $student->save();
 
         if($request){
-            return "Student Added Succefully";
+            return redirect('list-student');
         } else {
             return "Student Not Added Succefully";
 
         }
 
         
+    }
+
+    function list(){
+        $studentsData = Student::all();
+        return view('list-students', ['students' => $studentsData]);
     }
 }
