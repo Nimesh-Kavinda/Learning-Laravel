@@ -2,7 +2,7 @@
     <x-slot name="title">login Page</x-slot>
 
     <x-slot name="main">
-        <h1>Login Form</h1>
+        <h1 class="heading">Login Form</h1>
         <form action="" method="post">
             @csrf 
             <div class="mb-3 row">
@@ -17,7 +17,7 @@
       <input type="password" class="form-control" id="inputPassword">
     </div>
   </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="button" class="btn btn-primary" onclick="makeGreen()">Login</button>
         </form>
     </x-slot>
 </x-layout>
