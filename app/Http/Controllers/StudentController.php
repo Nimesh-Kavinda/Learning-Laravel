@@ -32,4 +32,17 @@ class StudentController extends Controller
         $studentsData = Student::all();
         return view('list-students', ['students' => $studentsData]);
     }
+
+    function delete($id){
+         $isDelete = Student::destroy($id);
+
+         if($isDelete == 1){
+            return redirect('list-student');
+         } elseif($isDelete == 0){
+            return "Data is Not Deleted";
+         }else{
+            return "Function do not working";
+         }
+
+    }
 }
