@@ -7,7 +7,7 @@ use App\Http\Controllers\ImageController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+}); 
 
 Route::view('home', 'home');
 
