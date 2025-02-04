@@ -12,7 +12,9 @@ Route::get('/', function () {
 }); 
 
 
-Route::get('send-email', [MailController::class,('sendEmail')]);
+Route::post('send-email', [MailController::class,('sendEmail')]);
+
+Route::view('send-email', 'send-email');
 
 
 
