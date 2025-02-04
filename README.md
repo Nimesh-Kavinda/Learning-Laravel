@@ -1,3 +1,26 @@
+# 🚀 Laravel Mastery Course Repository
+
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+
+## 📌 Overview
+This repository contains all the projects, code snippets, and exercises I completed while following a **Laravel Course** to master my Laravel skills. It covers essential Laravel topics, including:
+
+✅ MVC Architecture  
+✅ Routing & Middleware  
+✅ Blade Templating  
+✅ Database Migrations & Eloquent ORM  
+✅ Authentication & Authorization  
+✅ File Uploads & Storage  
+✅ Laravel Components & Livewire  
+✅ Testing in Laravel  
+✅ Deployment Strategies  
+
+> **Note:** This repository does **not** include Laravel API-related packages, as I have created a separate repository specifically for API development.
+
+## 📂 Project Structure
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
