@@ -20,4 +20,9 @@ class SellerController extends Controller
         return Seller::find(1)->ProductMany;
     }
 
+    function ManyToOne(){
+        return Product::with('seller')->get();
+       
+    }
+
 }
