@@ -13,6 +13,8 @@ Route::view('home', 'home');
 
 Route::view('login', 'login');
 
+Route::get('list', [StudentController::class, 'list']);
+
 
 
 
