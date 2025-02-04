@@ -16,6 +16,9 @@ Route::view('login', 'login');
 Route::get('list', [StudentController::class, 'list']);
 
 
+Route::get('save', [StudentController::class, 'save']);
+
+
 
 
 

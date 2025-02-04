@@ -11,8 +11,13 @@ class Student extends Model
         return ucfirst($val);
     }
 
-    
-    function getPhoneAttribute($val){
-        return '+94'.$val;
+    function setNameAttribute($val){
+        return $this->attributes['name'] = ucfirst($val);
     }
+
+    function setPhoneAttribute($val){
+        return $this->attributes['phone'] = "+94".$val;
+    }
+
+   
 }
