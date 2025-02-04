@@ -10,6 +10,7 @@ Route::get('/', function () {
 }); 
 
 Route::get('list', [SellerController::class, ('list')]);
+Route::get('many', [SellerController::class, ('ManyRel')]);
 
 
 

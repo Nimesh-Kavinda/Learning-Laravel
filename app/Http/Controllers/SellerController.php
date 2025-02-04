@@ -15,4 +15,9 @@ class SellerController extends Controller
     function list(){
         return Seller::find(1)->ProductData;
     }
+
+    function ManyRel(){
+        return Seller::find(1)->ProductMany;
+    }
+
 }
