@@ -1,22 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StudentController;
-use App\Http\Controllers\ImageController;
+use App\Http\Controllers\SellerController;
+
 
 
 Route::get('/', function () {
     return view('welcome');
 }); 
 
-Route::view('home', 'home');
 
-Route::view('login', 'login');
-
-Route::get('list', [StudentController::class, 'list']);
-
-
-Route::get('save', [StudentController::class, 'save']);
 
 
 
